@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cai2fas — Official Creator Hub</title>
+<meta name="description" content="The official cai2fas creator hub. Videos, clips, streams and socials.">
+<style>
+:root{--bg:#060609;--panel:#0d0d13;--panel2:#12121a;--text:#f7f7fa;--muted:#9b9ba8;--line:#24242f;--accent:#fff;--shadow:0 20px 70px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 50% -10%,#292936 0,#101016 42%,#060609 75%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,#000,transparent 65%)}
+.wrap{width:min(1120px,92%);margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;background:#060609b8;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff0d}.brand{display:flex;align-items:center;gap:10px}.pfp{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid #ffffff33;box-shadow:0 0 25px #7b2cff55}.logo{font-size:22px;font-weight:950;letter-spacing:-1.2px}.links{display:flex;gap:25px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
+.hero{min-height:650px;display:grid;place-items:center;text-align:center;padding:80px 0}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:#101017cc;padding:8px 13px;border-radius:999px;color:#c8c8d0;font-size:12px;font-weight:700;letter-spacing:.5px}.dot{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 15px #fff}
+h1{font-size:clamp(64px,12vw,140px);line-height:.84;letter-spacing:-9px;margin:25px 0;background:linear-gradient(180deg,#fff,#777782);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:650px;color:var(--muted);font-size:18px;line-height:1.65;margin:0 auto 30px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{padding:14px 20px;border-radius:13px;background:#fff;color:#07070a;font-weight:850;border:1px solid #fff;transition:.2s}.btn.alt{background:#111118;color:#fff;border-color:var(--line)}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0008}
+section{padding:78px 0}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.head h2{font-size:36px;letter-spacing:-1.5px;margin:0 0 5px}.head p{color:var(--muted);margin:0}.small{font-size:13px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px}.stat{background:linear-gradient(145deg,#15151e,#0b0b10);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}.stat:first-child{border-color:#3b3b49}.stat .label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800}.num{font-size:42px;font-weight:950;letter-spacing:-2px;margin:8px 0}.sub{color:var(--muted);font-size:13px}
+.video{border:1px solid var(--line);border-radius:22px;background:var(--panel);overflow:hidden;box-shadow:var(--shadow)}.video iframe{width:100%;aspect-ratio:16/9;display:block;border:0}.videoBottom{padding:22px;display:flex;justify-content:space-between;gap:15px;align-items:center}.videoBottom h3{margin:0 0 5px}.videoBottom p{margin:0;color:var(--muted);font-size:14px}
+.clips{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.clip{min-height:250px;background:linear-gradient(145deg,#171720,#0c0c11);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;transition:.2s}.clip:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,#fff1,transparent 35%)}.clip:hover{transform:translateY(-5px);border-color:#464652}.play{position:absolute;top:18px;left:18px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#000;font-size:18px}.clip h3,.clip p{position:relative}.clip h3{margin:0 0 6px}.clip p{margin:0;color:var(--muted);font-size:13px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.social{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:19px;transition:.2s}.social:hover{transform:translateY(-4px);border-color:#4a4a58}.social b{font-size:18px}.social span{display:block;color:var(--muted);margin-top:7px;font-size:13px}
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px}.panel h2{margin:0 0 10px}.panel p{color:var(--muted);line-height:1.7}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:760px){.links{display:none}.hero{min-height:570px;padding:55px 0}h1{letter-spacing:-5px}.stats,.clips,.about{grid-template-columns:1fr}.socials{grid-template-columns:1fr 1fr}.videoBottom{align-items:flex-start;flex-direction:column}.head{align-items:flex-start;gap:10px;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav"><a class="brand" href="#"><img class="pfp" src="cai2fas-pfp.jpeg" alt="cai2fas profile picture"><span class="logo">cai2fas</span></a><div class="links"><a href="#videos">Videos</a><a href="#clips">Clips</a><a href="#about">About</a><a href="#socials">Socials</a></div></nav>
+
+<header class="hero">
+<div>
+<div class="pill"><span class="dot"></span> OFFICIAL CREATOR HUB</div><div style="margin:24px auto 0;width:118px;height:118px;border-radius:50%;padding:4px;background:linear-gradient(135deg,#8c2cff,#fff,#5420ff);box-shadow:0 0 55px #7b2cff55"><img src="cai2fas-pfp.jpeg" alt="cai2fas" style="width:100%;height:100%;border-radius:50%;object-fit:cover"></div>
+<h1>cai2fas</h1>
+<p>Gaming. Videos. Streams. Clips. Everything from cai2fas, all in one place.</p>
+<div class="actions"><a class="btn" href="https://youtube.com/@cai2fas1" target="_blank">▶ Watch YouTube</a><a class="btn alt" href="https://www.twitch.tv/cai2fas" target="_blank">● Watch Twitch</a></div>
+</div>
+</header>
+
+<section id="stats">
+<div class="head"><div><h2>Channel stats</h2><p>A quick look at the channel.</p></div><span class="small">Updates when the page refreshes</span></div>
+<div class="stats">
+<div class="stat"><div class="label">Subscribers</div><div class="num" id="subs">Loading…</div><div class="sub">YouTube subscriber count</div></div>
+<div class="stat"><div class="label">Videos</div><div class="num" id="videosCount">—</div><div class="sub">Public uploads</div></div>
+<div class="stat"><div class="label">Views</div><div class="num" id="views">—</div><div class="sub">Channel views</div></div>
+</div>
+</section>
+
+<section id="videos">
+<div class="head"><div><h2>Latest videos</h2><p>New uploads from the channel.</p></div><a class="small" href="https://youtube.com/@cai2fas1/videos" target="_blank">View all →</a></div>
+<div class="video"><iframe src="https://www.youtube.com/embed?listType=user_uploads&list=cai2fas1" title="cai2fas uploads" allowfullscreen></iframe><div class="videoBottom"><div><h3>cai2fas on YouTube</h3><p>Gaming videos, uploads and whatever comes next.</p></div><a class="btn" href="https://youtube.com/@cai2fas1" target="_blank">Subscribe</a></div></div>
+</section>
+
+<section id="clips">
+<div class="head"><div><h2>Clips</h2><p>Best moments, highlights and short-form content.</p></div></div>
+<div class="clips">
+<a class="clip" href="https://www.tiktok.com/@cai2fas1" target="_blank"><span class="play">▶</span><h3>Latest TikTok clips</h3><p>Tap to see the newest short-form content.</p></a>
+<a class="clip" href="https://www.twitch.tv/cai2fas" target="_blank"><span class="play">▶</span><h3>Twitch highlights</h3><p>Streams, moments and gaming highlights.</p></a>
+<a class="clip" href="https://youtube.com/@cai2fas1/shorts" target="_blank"><span class="play">▶</span><h3>YouTube Shorts</h3><p>Quick clips and short videos from cai2fas.</p></a>
+</div>
+</section>
+
+<section id="about">
+<div class="about"><div class="panel"><div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><img src="cai2fas-pfp.jpeg" alt="" style="width:62px;height:62px;border-radius:50%;object-fit:cover;border:1px solid #ffffff22"><div><h2 style="margin:0">About cai2fas</h2><span class="small">Creator • Gamer • Streamer</span></div></div><p>Welcome to the official hub. This site brings the YouTube channel, clips, streams and community together so you can find everything in one spot.</p></div><div class="panel"><h2>Join the community</h2><p>Come hang out, talk about videos, and catch the next stream.</p><a class="btn" href="https://discord.gg/WKx96Dz2S" target="_blank">Join Discord</a></div></div>
+</section>
+
+<section id="socials">
+<div class="head"><div><h2>Everywhere</h2><p>Follow cai2fas across the internet.</p></div></div>
+<div class="socials">
+<a class="social" href="https://youtube.com/@cai2fas1" target="_blank"><b>YouTube</b><span>@cai2fas1</span></a>
+<a class="social" href="https://www.tiktok.com/@cai2fas1" target="_blank"><b>TikTok</b><span>@cai2fas1</span></a>
+<a class="social" href="https://www.twitch.tv/cai2fas" target="_blank"><b>Twitch</b><span>@cai2fas</span></a>
+<a class="social" href="https://discord.gg/WKx96Dz2S" target="_blank"><b>Discord</b><span>Join the server</span></a>
+</div>
+</section>
+
+<footer><span>© 2026 cai2fas</span><span>Built for the community.</span></footer>
+</div>
+
+<script>
+// Optional live stats: paste a YouTube Data API key into API_KEY.
+// YouTube's public API exposes subscriberCount, videoCount and viewCount.
+const API_KEY = "";
+const CHANNEL_ID = "";
+const subs = document.getElementById("subs");
+const vc = document.getElementById("videosCount");
+const views = document.getElementById("views");
+function fmt(n){return Number(n).toLocaleString();}
+async function loadStats(){
+ if(!API_KEY || !CHANNEL_ID){subs.textContent="—"; return;}
+ try{
+  const r=await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`);
+  const d=await r.json(); const s=d.items?.[0]?.statistics;
+  if(!s) throw new Error();
+  subs.textContent=fmt(s.subscriberCount);
+  vc.textContent=fmt(s.videoCount);
+  views.textContent=fmt(s.viewCount);
+ }catch(e){subs.textContent="—";}
+}
+loadStats();
+</script>
+</body>
+</html>
